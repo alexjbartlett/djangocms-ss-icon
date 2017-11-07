@@ -9,12 +9,12 @@ python:
 
 env:
   matrix:
-    - DJANGO=1.8.13 CMS=3.3.0
+    - DJANGO=1.8.13 CMS=3.3.4
     - DJANGO=1.8.13 CMS=3.4.4
-    - DJANGO=1.9.7 CMS=3.3.0
+    - DJANGO=1.9.7 CMS=3.3.4
     - DJANGO=1.9.7 CMS=3.4.4
-    - DJANGO=1.10.10 CMS=3.3.4
-    - DJANGO=1.10.10 CMS=3.4.4
+    - DJANGO=1.10.8 CMS=3.3.4
+    - DJANGO=1.10.8 CMS=3.4.4
 
 install:
   - pip install -r requirements-test.txt
