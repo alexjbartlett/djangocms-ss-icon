@@ -6,15 +6,12 @@ from cms.models import CMSPlugin
 
 
 DEFAULT_ICONS = (
-    ('fa-facebook', 'facebook'),
-    ('fa-foursquare', 'foursquare'),
-    ('fa-google-plus', 'google-plus'),
-    ('fa-instagram', 'instagram'),
-    ('fa-linkedin', 'linkedin'),
-    ('fa-twitter', 'twitter'),
-    ('fa-xing', 'xing'),
-    ('fa-yelp', 'yelp'),
-    ('fa-youtube-play', 'youtube'),
+    ('fa-facebook', 'Facebook'),
+    ('fa-google-plus', 'Google Plus'),
+    ('fa-instagram', 'Instagram'),
+    ('fa-linkedin', 'Linkedin'),
+    ('fa-twitter', 'Twitter'),
+    ('fa-youtube-play', 'YouTube'),
     ('fa-spinner', _('Spinner')),
     ('fa-refresh', _('Refresh')),
     ('fa-cog', _('Cog')),
@@ -66,6 +63,9 @@ class Icon(CMSPlugin):
         default=False,
         help_text=_('Icon will rotate with 8 steps.  Works well with spinner, refresh, cog')
     )
+
+    def __str__(self):
+        return self.get_icon_display() or ''
 
     @property
     def icon_class_names(self):
