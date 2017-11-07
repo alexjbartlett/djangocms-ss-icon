@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 from codecs import open
 from os import path
 import djangocms_ss_icon
@@ -47,13 +47,13 @@ setup(
     # What does your project relate to?
     keywords='djangocms fontawesome',
 
-    packages=find_packages(),
+    packages=['djangocms_ss_icon'],
 
     # Alternatively, if you want to distribute just a my_module.py, uncomment
     # this:
     #   py_modules=["my_module"],
 
-    install_requires=['djangocms>=3.4'],
+    install_requires=['django-cms>3.0,<=3.4.4',],
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
