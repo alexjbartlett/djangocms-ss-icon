@@ -16,7 +16,7 @@ setup(
     description='Add support for font awesome icons to django cms',
     long_description=long_description,
 
-    url='https://github.com/pypa/sampleproject',
+    url='https://github.com/alexjbartlett/djangocms-ss-icon',
 
     # Author details
     author='Alex J Bartlett',
