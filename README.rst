@@ -9,8 +9,14 @@ A simple plugin for djangocms that renders a font awesome icon using a <i> tag.
 Installation
 ------------
 
-```pip install djangocms_ss_icon```
+    pip install djangocms_ss_icon
 
+In your settings.py
+
+    INSTALLED_APPS = (
+        ...
+        'djangocms_ss_icon',
+    )
 
 Tested on
     * Python 2.7. 3.4, 3.5

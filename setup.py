@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 from codecs import open
 from os import path
 import djangocms_ss_icon
@@ -31,7 +31,7 @@ setup(
         #   3 - Alpha
         #   4 - Beta
         #   5 - Production/Stable
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 4 - Beta',
 
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Build Tools',
@@ -47,29 +47,10 @@ setup(
     # What does your project relate to?
     keywords='djangocms fontawesome',
 
-    packages=['djangocms_ss_icon'],
+    packages=find_packages(),
+    include_package_data=True,
 
-    # Alternatively, if you want to distribute just a my_module.py, uncomment
-    # this:
-    #   py_modules=["my_module"],
+    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, <4',
+    # install_requires=['django-cms>3.0,<=3.4.4',],
 
-    install_requires=['django-cms>3.0,<=3.4.4',],
-
-    # List additional groups of dependencies here (e.g. development
-    # dependencies). You can install these using the following syntax,
-    # for example:
-    # $ pip install -e .[dev,test]
-    extras_require={
-        'dev': ['check-manifest'],
-        'test': ['coverage'],
-    },
-
-    # To provide executable scripts, use entry points in preference to the
-    # "scripts" keyword. Entry points provide cross-platform support and allow
-    # pip to create the appropriate form of executable for the target platform.
-    entry_points={
-        'console_scripts': [
-            'sample=sample:main',
-        ],
-    },
 )

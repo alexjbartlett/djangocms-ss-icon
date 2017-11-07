@@ -22,9 +22,9 @@ DEFAULT_SIZES = (
     (None, _('Standard')),
     ('fa-lg', _('Large')),
     ('fa-2x', _('2x Large')),
-    ('fa-2x', _('3x Large')),
-    ('fa-2x', _('4x Large')),
-    ('fa-2x', _('5x Large')),
+    ('fa-3x', _('3x Large')),
+    ('fa-4x', _('4x Large')),
+    ('fa-5x', _('5x Large')),
 )
 SIZES = getattr(settings, 'DJANGOCMS_SS_SIZES', DEFAULT_SIZES)
 
@@ -71,6 +71,9 @@ class Icon(CMSPlugin):
     def icon_class_names(self):
         rv = ['fa']
         rv.append(self.icon)
+
+        if self.size:
+            rv.append(self.size)
 
         if self.spin:
             rv.append('fa-spin')

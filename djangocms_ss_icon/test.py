@@ -42,6 +42,11 @@ class IconTests(TestCase):
         model.fixed_width = True
         self.assertEqual(model.icon_class_names, 'fa fa-cog fa-fw')
 
+    def test_extra_size_classes(self):
+        model = Icon(icon='fa-cog')
+        model.size = 'fa-4x'
+        self.assertEqual(model.icon_class_names, 'fa fa-cog fa-4x')
+
     def test_str(self):
         model = Icon(icon='fa-facebook')
         self.assertEqual(str(model), 'Facebook')
