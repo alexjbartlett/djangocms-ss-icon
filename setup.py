@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 from codecs import open
 from os import path
-import djangocms_ss_icon
+import cmsplugin_ss_icon
 
 here = path.abspath(path.dirname(__file__))
 
@@ -10,8 +10,8 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='djangocms_ss_icon',
-    version=djangocms_ss_icon.__version__,
+    name='cmsplugin_ss_icon',
+    version=cmsplugin_ss_icon.__version__,
 
     description='Add support for font awesome icons to django cms',
     long_description=long_description,

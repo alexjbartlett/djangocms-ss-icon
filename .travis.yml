@@ -20,6 +20,6 @@ install:
   - python setup.py install
 
 script:
-  - coverage run $(which djangocms-helper) djangocms_ss_icon test --cms
+  - coverage run $(which djangocms-helper) cmsplugin_ss_icon test --cms
 
 after_success: coveralls

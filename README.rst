@@ -9,14 +9,17 @@ A simple plugin for djangocms that renders a font awesome icon using a <i> tag.
 Installation
 ------------
 
-    pip install djangocms_ss_icon
+    pip install cmsplugin_ss_icon
 
 In your settings.py
 
     INSTALLED_APPS = (
         ...
-        'djangocms_ss_icon',
+        'cmsplugin_ss_icon',
     )
+
+This package assumes that font-awesome css and fonts are already available in your build.  For information
+about how to include font-awesome on your site see the .. _official documentation: http://fontawesome.io/get-started/
 
 Tested on
     * Python 2.7. 3.4, 3.5

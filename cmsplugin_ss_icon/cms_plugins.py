@@ -12,7 +12,7 @@ class IconPlugin(CMSPluginBase):
     model = Icon
     name = _('Icon')
     module = _('Generic')
-    render_template = 'djangocms_ss_icon/icon.html'
+    render_template = 'cmsplugin_ss_icon/icon.html'
     allow_children = False
 
 

@@ -5,19 +5,6 @@ from django.utils.translation import ugettext_lazy as _
 from cms.models import CMSPlugin
 
 
-DEFAULT_ICONS = (
-    ('fa-facebook', 'Facebook'),
-    ('fa-google-plus', 'Google Plus'),
-    ('fa-instagram', 'Instagram'),
-    ('fa-linkedin', 'Linkedin'),
-    ('fa-twitter', 'Twitter'),
-    ('fa-youtube-play', 'YouTube'),
-    ('fa-spinner', _('Spinner')),
-    ('fa-refresh', _('Refresh')),
-    ('fa-cog', _('Cog')),
-)
-ICONS = getattr(settings, 'DJANGOCMS_SS_ICONS', DEFAULT_ICONS)
-
 DEFAULT_SIZES = (
     (None, _('Standard')),
     ('fa-lg', _('Large')),
@@ -36,7 +23,7 @@ class Icon(CMSPlugin):
         _('Icon'),
         max_length=255,
         blank=False,
-        choices=ICONS
+        help_text=_('A font-awesome class, e.g. fa-facebook or fa-cog')
     )
 
     size = models.CharField(
@@ -65,7 +52,7 @@ class Icon(CMSPlugin):
     )
 
     def __str__(self):
-        return self.get_icon_display() or ''
+        return self.icon or ''
 
     @property
     def icon_class_names(self):

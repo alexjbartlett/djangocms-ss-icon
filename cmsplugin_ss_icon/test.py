@@ -49,4 +49,4 @@ class IconTests(TestCase):
 
     def test_str(self):
         model = Icon(icon='fa-facebook')
-        self.assertEqual(str(model), 'Facebook')
+        self.assertEqual(str(model), 'fa-facebook')
